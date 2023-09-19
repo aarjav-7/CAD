@@ -1,0 +1,52 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITrip - Your Travel Companion</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>VITrip</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="trip">Profile</a></li>
+                <li><a href="#">Existing Tours</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to VITrip</h1>
+        <p>A Traveller in need gets a Traveller Indeed</p>
+        <a href="#" class="cta-button">Click Here</a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h2>Reduce Pollution</h2>
+            <p>Protect the environment.</p>
+        </div>
+        <div class="feature">
+            <h2>Reduce Traffic Congestion</h2>
+            <p>Help reduce the number of cars on the road.</p>
+        </div>
+        <div class="feature">
+            <h2>Reduce Expenses</h2>
+            <p>Splitting the fare with someone else can make a big difference .</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 VITrip. All rights reserved.</p>
+    </footer>
+</body>
+</html>
