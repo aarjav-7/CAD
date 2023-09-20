@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - VITrip</title>
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+    <header>
+        <h1>My Profile</h1>
+    </header>
+
+    <main>
+        <section class="profile">
+            <h2>User Information</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value={{user.first_name}} readonly>
+                </div>
+                <div class="form-group">
+                    <label for="registrationNumber">Registration Number:</label>
+                    <input type="text" id="registrationNumber" name="registrationNumber" value={{user.username}} readonly>
+                </div>
+                <div class="form-group">
+                    <label for="hostelName">Hostel Name:</label>
+                    <input type="text" id="hostelName" name="hostelName" value={{user.last_name}} readonly>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email ID:</label>
+                    <input type="email" id="email" name="email" value={{user.email}} readonly>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" value=8610748057 readonly>
+                </div>
+                <div class="form-group">
+                    <button id="editProfileButton" type="button">Edit Profile</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 VITrip. All rights reserved.</p>
+    </footer>
+</body>
+</html>
