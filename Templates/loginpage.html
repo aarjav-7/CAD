@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITrip Sign-Up</title>
+    <link rel="stylesheet" href="{% static 'loginpage.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="accounts/login" method="post" class="signup-form">
+            {% csrf_token %}
+            <h2>Login for VITrip</h2>
+            <div class="input-container">
+                <input type="text" name="regno" required>
+                <label for="name">Register Number</label>
+            </div>
+            <div class="input-container">
+                <input type="password" name="password" required>
+                <label for="password">password</label>
+            </div>
+
+            <button type="submit">Login </button>
+        </form>
+    </div>
+</body>
+</html>

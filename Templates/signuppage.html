@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITrip Sign-Up</title>
+    <link rel="stylesheet" href="{% static 'signuppage.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="accounts/register" method="post" class="signup-form">
+            {% csrf_token %}
+            <h2>Sign Up for VITrip</h2>
+            <div class="input-container">
+                <input type="text" name="name" required>
+                <label for="name">Name</label>
+            </div>
+            <div class="input-container">
+                <input type="email" name="email" required>
+                <label for="email">Vitmail ID</label>
+            </div>
+            <div class="input-container">
+                <input type="password" name="password" required>
+                <label for="password">Password</label>
+            </div>
+            <div class="input-container">
+                <input type="password" name="password-again" required>
+                <label for="password-again">Password Again</label>
+            </div>
+            <div class="input-container">
+                <input type="text" name="hostel" required>
+                <label for="hostel">Hostel</label>
+            </div>
+
+            <div class="input-container">
+                <input type="text" name="registration-number" required>
+                <label for="registration-number">Registration Number</label>
+            </div>
+
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

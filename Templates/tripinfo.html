@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITrip - Trip Information</title>
+    <link rel="stylesheet" href="{% static 'tripinfo.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>VITrip</h1>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="profile">Profile({{user.first_name}})</a></li>
+                <li><a href="#">Existing Tours</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="accounts/logout">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="trip-info">
+            <h1>Trip Information</h1>
+
+            <div class="dropdown">
+                <label for="date">Date:</label>
+
+                <input type="Date">
+
+                </select>
+                <br>
+                <br>
+                <label for="time">Departure time:</label>
+                <input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+            </div>
+
+            </select>
+            <br>
+
+            </div>
+            <div class="dropdown">
+                <label for="pickup">Pick-up Location:</label>
+                <select id="pickup" name="pickup">
+                    <option value="location1">VIT Main Gate</option>
+                    <option value="location2">Chennai Airport</option>
+                    <option value="location3">Katpadi Station</option>
+                </select>
+            </div>
+
+            <div class="dropdown">
+                <label for="drop">Drop Location:</label>
+                <select id="drop" name="drop">
+                    <option value="location1">Chennai Airport</option>
+                    <option value="location2">VIT Main Gate</option>
+                    <option value="location3">Katpadi Station</option>
+                </select>
+            </div>
+
+            </div>
+            <button type="submit">Enter</button>
+
+
+
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
